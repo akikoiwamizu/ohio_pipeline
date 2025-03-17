@@ -1,0 +1,132 @@
+version: 2
+
+models:
+  - name: voter_history
+    description: "Cleaned and formatted voter file ready for transformation."
+    columns:
+      - name: sos_voterid
+        description: "Unique voter ID from Secretary of State."
+      - name: election_date
+        description: "Election date."
+      - name: election_type
+        description: "Election type (e.g. Special, Primary, General)."
+      - name: voted_party
+        description: "Party affiliation based on vote history."
+  - name: voter_households
+    description: "Cleaned and formatted voter file ready for transformation."
+    columns:
+      - name: household_id
+        description: "MD5 hashed address, unique ID."
+      - name: resident_address1
+        description: "Voter's primary residence address."
+      - name: resident_city
+        description: "Voter's city of residence."
+      - name: resident_zip
+        description: "ZIP code of the voter's address."
+      - name: county_number
+        description: "Number that identifies each of Ohio's 88 Counties."
+      - name: precinct_name
+        description: "Name of Precinct."
+      - name: voter_count
+        description: "Number of voters at a given address."
+  - name: voter_records
+    description: "Cleaned and formatted voter file ready for transformation."
+    columns:
+      - name: sos_voterid
+        description: "Unique voter ID from Secretary of State."
+      - name: first_name
+        description: "Voter's first name."
+      - name: middle_name
+        description: "Voter's middle name."
+      - name: last_name
+        description: "Voter's last name."
+      - name: suffix
+        description: "Voter's name suffix."
+      - name: county_number
+        description: "Number that identifies each of Ohio's 88 Counties."
+      - name: county_id
+        description: "County's unique system-generated ID."
+      - name: dob
+        description: "Voter's date of birth."
+      - name: registration_date
+        description: "Date when the voter registered."
+      - name: voter_status
+        description: "Current voter status."
+      - name: party_affiliation
+        description: "Voter's party affiliation from last Primary Election history."
+      - name: resident_address1
+        description: "Voter's primary residence address."
+      - name: resident_address2
+        description: "Voter's secondary residence address."
+      - name: resident_city
+        description: "Voter's city of residence."
+      - name: resident_state
+        description: "Voter's state of residence."
+      - name: resident_zip
+        description: "ZIP code of the voter's address."
+      - name: resident_zip4
+        description: "ZIP+4 Code for voter's address."
+      - name: resident_country
+        description: "Voter's country of residence."
+      - name: resident_postal_code
+        description: "Voter's postal code."
+      - name: mailing_address1
+        description: "Voter's mailing address."
+      - name: mailing_address2
+        description: "Voter's mailing address (continued)."
+      - name: mailing_city
+        description: "Voter's mailing city."
+      - name: mailing_state
+        description: "Voter's mailing state."
+      - name: mailing_zip
+        description: "Voter's mailing ZIP code."
+      - name: mailing_zip4
+        description: "Mailing ZIP+4 Code."
+      - name: mailing_country
+        description: "Voter's mailing country."
+      - name: mailing_postal_code
+        description: "Voter's mailing postal code."
+      - name: career_center
+        description: "Name of Career Center."
+      - name: city
+        description: "Name of City."
+      - name: city_school_district
+        description: "Name of City School District."
+      - name: county_court_district
+        description: "Name of County Court District."
+      - name: congressional_district
+        description: "Congressional District identifier."
+      - name: court_appeals
+        description: "Court of Appeals identifier."
+      - name: education_service_center
+        description: "Name of Education Service Center."
+      - name: exempted_village_school_district
+        description: "Name of Exempt School District."
+      - name: library_district
+        description: "Name of Library District."
+      - name: local_school_district
+        description: "Name of Local School District."
+      - name: municipal_court_district
+        description: "Name of Municipal Court District."
+      - name: precinct
+        description: "Name of Precinct."
+      - name: precinct_code
+        description: "Code assigned to the Precinct."
+      - name: state_board_education
+        description: "State Board of Education identifier."
+      - name: state_representative_district
+        description: "House District identifier."
+      - name: state_senate_district
+        description: "State Senate District identifier."
+      - name: township
+        description: "Name of Township."
+      - name: village
+        description: "Name of Village."
+      - name: ward
+        description: "Name of Ward."
+      - name: vote_history
+        description: "JSON object storing historical voting records."
+      - name: household_id
+        description: "MD5 hash representing a unique household."
+      - name: created_at
+        description: "Timestamp of when the record was inserted."
