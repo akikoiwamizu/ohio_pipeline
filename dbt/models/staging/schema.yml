@@ -1,0 +1,8 @@
+version: 2
+
+sources:
+  - name: ingest # Dataset reference
+    database: cta-tech-assessment # GCP project ID
+    schema: ingest # BQ dataset name
+    tables:
+      - name: staging_voter_records
