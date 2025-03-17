@@ -93,13 +93,7 @@ def gcs_to_bigquery(cloud_event: functions_framework.CloudEvent) -> None:
         autodetect=True,  # Let BigQuery infer the schema
         skip_leading_rows=1,
         write_disposition="WRITE_TRUNCATE",
-        column_name_character_map="V2",  # Handle column name issues (i.e. "PRIMARY-03/07/2000")
-        clustering_fields=[
-            "precinct_name",
-            "residential_zip",
-            "residential_city",
-            "county_number",
-        ],  # Optimize lookups
+        column_name_character_map="V2",  # Handle column name issues (i.e. "PRIMARY-03/07/2000" -> "PRIMARY_03_07_2000")
     )
 
     load_job = client.load_table_from_uri(
