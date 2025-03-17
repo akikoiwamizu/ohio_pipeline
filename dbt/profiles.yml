@@ -1,0 +1,18 @@
+ohio_voter_dbt:
+  target: prod
+  outputs:
+    dev:
+      type: bigquery
+      method: service-account
+      project: cta-tech-assessment
+      dataset: ingest # Raw BigQuery staging tables
+      threads: 4
+      keyfile: keys/cta-tech-assessment-af80bfa1dc68.json
+
+    prod:
+      type: bigquery
+      method: service-account
+      project: cta-tech-assessment
+      dataset: dbt_prod # Final processed dbt tables
+      threads: 4
+      keyfile: keys/cta-tech-assessment-af80bfa1dc68.json
