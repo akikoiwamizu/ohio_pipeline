@@ -22,10 +22,10 @@ ohio-voter-file/                        # Root of GitHub repo
 │   │   ├── staging/                    # Staging models
 │   │   │   ├── schema.yml              # Staging table model
 │   │   ├── final/                      # Production models
-│   │   │   ├── schema.yml              # Production table models
+│   │   │   ├── schema.yml              # Production table schemas
 │   │   │   ├── voter_history.yml       # Production table model: voter history since 2000
-│   │   │   ├── voter_households.yml    # Production table models: voter households aggregated by hashed address
-│   │   │   ├── voter_records.yml       # Production table models: voter records deduplicated & normalized
+│   │   │   ├── voter_households.yml    # Production table model: voter households aggregated by hashed address
+│   │   │   ├── voter_records.yml       # Production table model: voter records deduplicated & normalized
 │   ├── dbt_project.yml                 # dbt configuration file
 │   ├── packages.yml                    # dbt dependencies
 │   ├── profiles.yml                    # BigQuery connection config
